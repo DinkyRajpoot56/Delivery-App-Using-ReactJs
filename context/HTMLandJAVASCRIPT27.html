@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>JavaScript console table() method example</title>
+</head>
+<body>
+    <script>
+        //sample code1 an object
+        var student = {
+            course: "JavaScript",
+            price: "5000"
+        };
+        console.table(student);
+
+        //sample code2 an array of strings(Matrix table)
+        console.table([
+            ["apples", "oranges", "kiwi"],
+            ["Rs 80/kg", "Rs 100/kg", "Rs 120/kg"],
+            ["5 *", "4 *", "4.5 *"]
+        ]);
+
+        //sample code3 an array of objects
+        const bike1 = { name: "Pulsar", model: "A4" }
+        const bike2 = { name: "Yamaha", model: "XC90" }
+        const bike3 = { name: "Ather", model: "Fusion" }
+
+        console.table([bike1, bike2, bike3]);
+        console.table([bike1, bike2, bike3], ["model"]);
+
+        //sample code4 an object whose properties are strings
+
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+        const per1 = new Person("John", "Doe");
+        console.table(per1);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>JavaScript Prototpe Example</title>
+</head>
+<body>
+    <script>         
+        function Employee() {
+              this.Name = "";
+              this.Salary = "";
+        };
+
+       function EmployeeCRUD() {
+              this.AddEmployee = function(){
+                   console.log("Employee Added Name: " + this.Name);
+              } 
+              this.UpdateEmployee = function(){
+                   console.log("Employee Updated Name: " + this.Name);
+              } 
+              this.GetEmployeeDetails = function(){
+                   console.log("Fetch Employee Details Name: " + this.Name);
+              } 
+              this.DeleteEmployee = function(){
+                   console.log("Employee Deleted Name: " + this.Name);
+              } 
+       };
+
+       EmployeeCRUD.prototype = new Employee();
+       var empCrud = new EmployeeCRUD();
+       empCrud.Name = "Anurag"; //Access the Parent Property
+       empCrud.Salary = 10000; //Access the Parent Property
+
+       empCrud.AddEmployee(); //Calling the Child Method
+       empCrud.UpdateEmployee(); //Calling the Child Method
+       empCrud.GetEmployeeDetails(); //Calling the Child Method
+       empCrud.DeleteEmployee(); //Calling the Child Method
+    </script>
+</body>
+</html>

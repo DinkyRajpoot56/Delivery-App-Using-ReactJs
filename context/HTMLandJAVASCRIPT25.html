@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>JavaScript console timeEnd() method example</title>
+</head>
+<body>
+    <script>
+        //sample code1 with label
+        console.time('sample code1');
+        var student = {
+            course: "JavaScript",
+            price: "5000"
+        };
+        console.timeEnd('sample code1');
+
+        //sample code2
+        console.time();
+        for (let i = 0; i < 100000; i++) {
+            // some code
+        }
+        console.timeEnd();
+
+        //sample code3
+        console.time("timeout timer");
+        setTimeout(() => {
+            console.timeEnd("timeout timer")
+        }, 1000);
+
+    </script>
+</body>
+</html>

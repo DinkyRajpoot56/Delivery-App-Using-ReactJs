@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>JavaScript console assert() method example</title>
+</head>
+<body>
+    <script>
+        //sample code1
+        function test() {
+            a = -10;
+            window.console.assert(a === -10, "a is not equal to -10"); //true
+            console.assert(a >= 0, 'a is negative') //false
+        }
+        test();
+
+        //sample code2
+        let x = 1;
+        let y = 2;
+        console.assert(x + y == 11, "Expression returned 'false'"); //false
+
+        //sample code3
+        /*truthy value, nothing will be logged
+         */
+        console.assert(1, '1 is falsy value');
+        console.assert(true, 'true is falsy value');
+        console.assert('hello javascript', 'hello JavaScript is a falsy value');
+
+        /*falsy value, assertion failed error logged
+         */
+        console.assert(0, '0 is falsy value');
+        console.assert(false, 'false is falsy value');
+        console.assert('', 'an empty string is a falsy value');
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>JavaScript Closure Example</title>
+</head>
+<body>
+    <script>   
+        function Counter() {
+              var count = 0;
+              // The Increment function is ENCLOSED 
+              // inside the Counter function
+              var Increment = function(){
+                  count ++;
+                  console.log("Count : "+ count);
+              }
+              
+              return {
+                  Increment
+             }
+        };
+
+        var counter1 = new Counter();
+        counter1.Increment(); //1
+        counter1.Increment(); //2
+
+        var counter2 = new Counter();
+        counter2.Increment(); //1
+        counter2.Increment(); //2
+    </script>
+</body>
+</html>

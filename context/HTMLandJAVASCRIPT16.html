@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Objects creation in JavaScript Using new Object() method to store empty object and Boolean object in it example</title>
+</head>
+<body>
+    <script>
+        //Using new Object() method syntax to store undefined, null and Boolean object
+        //Using object storing an empty object in myObj by passing undefined and null types
+        let myObj = new Object();
+        let myObj1 = new Object(undefined);
+        let myObj2 = new Object(null);
+
+        //Using Object to create Boolean object/store Boolean objects in myObj
+        let myObj3 = new Object(true); // equivalent to myObj3 = new Boolean(true)
+        let myObj4 = new Object(new Boolean()); // equivalent to myObj4 = new Boolean(false)
+
+        console.log("Using new Object() method - object store in myObj: ", myObj);//empty object
+        console.log("myObj using new Object() method type? : ", typeof myObj);// object
+
+        console.log("Using new Object() method - object store in myObj1: ", myObj1);//empty object
+        console.log("myObj1 using new Object() method type? : ", typeof myObj1);// object
+
+        console.log("Using new Object() method - object store in myObj2: ", myObj2);//empty object
+        console.log("myObj2 using new Object() method type? : ", typeof myObj2);// object
+
+        console.log("Using new Object() method - object store in myObj3: ", myObj3);//Boolean object
+        console.log("myObj3 using new Object() method type? : ", typeof myObj3);// object
+
+        console.log("Using new Object() method - object store in myObj4: ", myObj4);//Boolean object
+        console.log("myObj4 using new Object() method type? : ", typeof myObj4);// object
+    </script>
+</body>
+</html>

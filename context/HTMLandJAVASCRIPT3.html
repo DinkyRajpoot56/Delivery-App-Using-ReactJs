@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>JavaScript Prototypical Inheritance Example</title>
+</head>
+<body>
+    <script>         
+        function Employee() {
+              this.Name = "";
+              this.Company = "DotNetTutorials";
+        };
+
+       var ChildEmployee1 = new Employee();
+       ChildEmployee1.Fun1 = function(){
+              this.Name = "Anurag";
+              console.log("Fun1 Function");
+              console.log("Name : " + this.Name);
+              console.log("Company : " + this.Company);
+       };
+
+       var ChildEmployee2 = new Employee();
+       ChildEmployee2.Fun2 = function(){
+              this.Name = "Mohanty";
+              console.log("Fun2 Function");
+              console.log("Name : " + this.Name);
+              console.log("Company : " + this.Company);
+       };
+
+       ChildEmployee1.Fun1();
+       ChildEmployee2.Fun2();
+    </script>
+</body>
+</html>

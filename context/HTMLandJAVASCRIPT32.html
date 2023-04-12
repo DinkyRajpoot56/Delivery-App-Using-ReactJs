@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>JavaScript console groupEnd() method example</title>
+</head>
+<body>
+    <script>
+        //sample code1
+        console.log("Sample code1!")
+        console.group('Grandparents Group'); // label optional
+        console.log('Grandpa');
+        console.log('Grandma');
+        console.groupEnd();
+        console.group('Parents Group');
+        console.log('Father');
+        console.log('Mother');
+        console.groupEnd();
+        console.group('Children Group');
+        console.log('Son');
+        console.log('Daughter');
+        console.groupEnd();
+
+        //sample code2
+        console.log("Sample code2!")
+        console.group('start group');
+        console.log('start test 1');
+        console.log('start test 2');
+        console.error('start test 3');
+        console.groupEnd('start group');
+
+        //sample code3
+        console.log("Sample code3!");
+        const testObj = {
+            key: 'test'
+        };
+        console.group('(JSON) object');
+        console.dir(testObj);
+        console.dirxml(testObj);
+        console.log(testObj);
+        console.groupEnd();
+    </script>
+</body>
+</html>

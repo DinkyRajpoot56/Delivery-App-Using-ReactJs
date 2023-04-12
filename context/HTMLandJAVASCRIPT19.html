@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Object's creation in JavaScript, by Using Object constructor example</title>
+</head>
+<body>
+    <script>
+        //Object constructor syntax
+        function person(name, age, color) {
+            this.name = name;
+            this.age = age;
+            this.favColor = color;
+        }
+
+        var john = new person("John", 42, "green");
+        var maria = new person("Maria", 21);
+
+        console.log("Using Object constructor - john object: ", john)
+        console.log("Using Object constructor - john object length: ", Object.getOwnPropertyNames(john).length)
+        console.log("john using Object constructor type? : ", typeof john);// object
+        console.log("Using Object constructor - maria object: ", maria)
+        console.log("Using Object constructor - maria object length: ", Object.getOwnPropertyNames(maria).length)
+        console.log("maria using Object constructor type? : ", typeof maria);// object
+
+        console.log("Using Object constructor - with dot notation-->Property name value of john is: " + john.name);
+        console.log("Using Object constructor - with dot notation-->Property age value of john is: " + john.age);
+        console.log("Using Object constructor - with dot notation-->Property favColor value of john is: " + john.favColor);
+        console.log("Using Object constructor - with bracket notation-->Property name value of maria is: " + maria['name']);
+        console.log("Using Object constructor - with bracket notation-->Property name value of maria is: " + maria['age']);
+        console.log("Using Object constructor - with bracket notation-->Property name value of maria is: " + maria['favColor']);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title> JavaScript Prototype Method Chaining Example </title>
+</head>
+<body>
+    <script>         
+        function Employee() {
+              this.Name = "Anurag";
+              this.Salary = 10000;
+        this.GetEmployeeDetails = function(){
+                   console.log("Fetch Employee Details Name: " + this.Name);
+              } 
+        };
+
+       function EmployeeCRUD() {
+              this.AddEmployee = function(){
+                   console.log("Employee Added Name: " + this.Name);
+              } 
+              this.UpdateEmployee = function(){
+                   console.log("Employee Updated Name: " + this.Name);
+              } 
+       };
+
+       EmployeeCRUD.prototype = new Employee();
+       var empCrud = new EmployeeCRUD();
+       empCrud.AddEmployee(); //Calling the Child Method
+       empCrud.UpdateEmployee(); //Calling the Child Method
+       empCrud.GetEmployeeDetails(); //Calling the Parent Method
+       empCrud.DeleteEmployee(); //Error
+
+    </script>
+</body>
+</html>

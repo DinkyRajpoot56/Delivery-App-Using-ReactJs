@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>JavaScript Stateless Example</title>
+</head>
+<body>
+    <script>   
+        var count = 0; //Declare Globally
+      
+        function Counter() {
+              count ++;
+              console.log("Count : "+ count);
+        };
+
+        function MyCounter() {
+              count ++;
+              console.log("Count : "+ count);
+        };
+
+        Counter();
+        MyCounter();
+        Counter();
+    </script>
+</body>
+</html>

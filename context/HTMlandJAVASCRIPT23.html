@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>JavaScript console warn() method example</title>
+</head>
+<body>
+    <script>
+        //sample code1
+        var student = {
+            course: "JavaScript",
+            price: "5000"
+        };
+        console.warn(student);
+
+        //sample code2
+        const myArr = ["apples", "oranges", "kiwi"];
+        console.warn(myArr);
+
+        //sample code3
+        var year = 2022;
+        console.warn('sample code3:', year);
+
+        //sample code4
+        console.warn('This is sample warning message');
+
+        //sample code4
+        const printNum = number => {
+            if (!number) {
+                console.warn('number is not provided');
+            }
+        };
+        printNum();
+    </script>
+</body>
+</html>

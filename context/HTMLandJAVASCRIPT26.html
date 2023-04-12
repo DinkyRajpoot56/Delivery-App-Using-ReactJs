@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>JavaScript console timeLog() method example</title>
+</head>
+<body>
+    <script>
+        //sample code1
+        console.time('sample code1');
+        var student = {
+            course: "JavaScript",
+            price: "5000"
+        };
+        console.timeLog('sample code1');
+        console.timeEnd('sample code1');
+
+        //sample code2
+        console.time("timer start");
+        console.info("Click to continue");
+        console.timeLog("timer start");
+        console.info("click again");
+        console.timeEnd("timer start");
+
+        //sample code3
+        console.time("timeout timer");
+        setTimeout(() => {
+            console.timeEnd("timeout timer")
+        }, 1000);
+        setTimeout(() => {
+            console.timeLog("timeout timer")
+        }, 500);
+    </script>
+</body>
+</html>

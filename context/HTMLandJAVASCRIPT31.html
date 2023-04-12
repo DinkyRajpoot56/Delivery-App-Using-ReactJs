@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>JavaScript console groupCollapsed() method example</title>
+</head>
+<body>
+    <script>
+        //sample code1 with label
+        console.log("Hello with label...!")
+        console.groupCollapsed('Blog 1'); // label optional
+        console.log('Blog Created');
+        console.log('Blog Edited');
+        console.error('Blog Deleted');
+        console.groupEnd();
+
+        //sample code2 without label
+        console.log("Hello without label...!")
+        console.groupCollapsed();
+        console.log("This is group message");
+    </script>
+</body>
+</html>

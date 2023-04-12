@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Objects creation in JavaScript, by Using new Object() method, wrap the key in square brackets to use a variable as object key called Computed property names example</title>
+</head>
+<body>
+    <script>
+        // four variables are created and assigned in a single go, separated by commas
+        var myObj = new Object(),
+            str = 'This is sample string',
+            randNum = Math.random(),
+            obj = new Object();
+
+        //In order to use variable as object key, wrap the object key in square brackets also called Computed property name/dynamically determined
+        myObj.type = 'Dot notation syntax';
+        myObj['date created'] = 'String with space';
+        myObj[str] = 'String value';
+        myObj[randNum] = 'Random Number';
+        myObj[obj] = 'Object';
+        myObj[''] = 'An empty string';
+
+        console.log('typeof myObj.type:', typeof myObj.type); //string
+        console.log("typeof myObj['date created']:", typeof myObj['date created']); //string
+        console.log('typeof myObj[str]:', typeof myObj[str]); //string
+        console.log('typeof myObj[randNum]:', typeof myObj[randNum]); //string
+        console.log('typeof myObj[obj]:', typeof myObj[obj]); //string
+        console.log("typeof myObj['']:", typeof myObj['']); //string
+        console.log('The Computed property names/key of myObj object is:\n ', myObj);
+    </script>
+</body>
+</html>

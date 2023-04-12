@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Object's creation in JavaScript, by Using object literal with Object constructor example</title>
+</head>
+<body>
+    <script>
+        //object literals
+        var cadiParams = {
+            make: "GM",
+            model: "Cadillac",
+            year: 1955,
+            color: "tan",
+            passengers: 5,
+            convertible: false,
+            mileage: 12892
+        };
+
+        //calling Car constructor
+        var cadi = new Car(cadiParams);
+        cadi.start(); //constructor method
+        cadi.drive();
+        cadi.stop();
+
+  //Car constructor
+        function Car(params) {
+            this.make = params.make;
+            this.model = params.model;
+            this.year = params.year;
+            this.color = params.color;
+            this.passengers = params.passengers;
+            this.convertible = params.convertible;
+            this.mileage = params.mileage;
+            this.started = false;
+            this.start = function () {
+                this.started = true;
+            };
+            this.stop = function () {
+                this.started = false;
+            };
+            this.drive = function () {
+                if (this.started) {
+                    alert("Zoom zoom!");
+                } else {
+                    alert("You need to start the engine first.");
+                }
+            };
+        }
+    </script>
+</body>
+</html>

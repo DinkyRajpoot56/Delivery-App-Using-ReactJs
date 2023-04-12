@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>JavaScript console dirxml() method example</title>
+</head>
+<body>
+    <div class="h">
+        <h1>JavaScript Tutorials</h1>
+        <p>dirxml method demo</p>
+    </div>
+
+    <script>
+        //sample code1
+        console.dirxml(document.querySelector(".h"));
+
+        //sample code2
+        var student = {
+            course: "JavaScript",
+            price: "5000"
+        };
+        console.dirxml(student, 'console.dirxml- sample code 2')
+
+        //sample code2
+        console.dirxml(document.body, "console.dirxml- sample code 3");
+    </script>
+</body>
+</html>
